@@ -5,6 +5,7 @@
     img{
         width: 100%;
         border-radius: 10px;
+        margin-bottom: 5px;
     
     }
     span.label{
@@ -42,8 +43,7 @@
         left: 0;
         top: 50%;
         right: 0;
-        border-top: 1px solid;
-        border-color:#CDCDCD;
+        border-top: 1px solid;        
          
         -webkit-transform:rotate(-10deg);
         -moz-transform:rotate(-10deg);
@@ -53,8 +53,22 @@
     }
 }
 
-button{
+/*
+.grupo{
+    background-color:#F7F7F7; 
+    border: none;
+    .right{
+        border-top-right-radius: 25%;
+    }
+    .left{
+        border-top-left-radius: 25%;
+    }
+}*/
+#añadir{
     width: 100%;
     display: block;
     background-color: #88CC88;    
 }
+
+
+

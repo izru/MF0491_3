@@ -14,7 +14,7 @@
   <!--<div class="col-sm-4">    -->
     <div class="productos" *ngFor="let producto of stock | filterPipe:searchText">     
       <span class="glyphicon glyphicon-ok-sign" aria-hidden="true" ></span>        
-      <a (click)="seleccionar($event, producto)"><app-producto [productoParametro]="producto"></app-producto> </a>
+      <a (click)="seleccionar($event, producto)"><app-producto [producto]="producto"></app-producto> </a>
     </div>
   <!--</div>-->
     

@@ -11,8 +11,10 @@
       </p>
       <p class="precioUnitario">({{producto.precioUnidad}})</p>
       <p>{{producto.marca | uppercase}} {{producto.descripcion }} </p>
-      <!--<span class="label label-primary" (click)="sumar()"> {{producto.cantidad}}<i class="fa fa-heart-o" aria-hidden="true"></i></span>-->
+      <span class="btn left " (click)="restar()"><i class="fa fa-minus"></i></span>
+      <span  class="btn">{{producto.cantidad}}</span>
+      <span  class="btn  right" (click)="sumar()"><i class="fa fa-plus"></i></span>      
   </div>
   
 </div>
-<button type="button" class="btn btn-primary btn-sm">AÑADIR AL CARRO</button>
+<button type="button" class="btn btn-primary btn-sm" id="añadir">AÑADIR AL CARRO</button>
