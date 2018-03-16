@@ -8,9 +8,10 @@ export class Producto{
     foto: string;
     valor:number;
     unidad:string;
-    precioUnidad:number;
+    precioUnidad:string;
     //atributo calculado
     rebajado:number;
+    cantidad:number;
 
     constructor(){
         console.log('Producto constructor');
@@ -23,7 +24,8 @@ export class Producto{
         this.foto= "";
         this.valor=0;
         this.unidad=""; 
-        this.precioUnidad=0;      
+        this.precioUnidad="";      
         this.rebajado=0;
+        this.cantidad=0;
     }
 }

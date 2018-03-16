@@ -26,7 +26,7 @@ export class ServicioService {
       producto.foto=element.foto;
       producto.valor=element.valor;
       producto.unidad=element.unidad; 
-      producto.pecioUnidad =element.precioUnidad; 
+      producto.precioUnidad =element.precioUnidad; 
       if(element.descuento>0)
       {
         producto.rebajado =element.precio- (element.precio * (element.descuento/ 100)) ;

@@ -32,4 +32,14 @@ export class SupermercadoComponent implements OnInit {
     this.producto =producto;
   }
 
+  sumar() {
+    console.log('Click mas cantidad');
+    this.producto.cantidad++;
+  }
+
+  restar() {
+    console.log('Click mas cantidad');
+    this.producto.cantidad--;
+  }
+
 }

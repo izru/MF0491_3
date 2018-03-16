@@ -1,19 +1,22 @@
 <div class="container">
-<input class="todo" type="search" [(ngModel)]="searchText" name="filtro" placeholder="nombre del producto" >
-
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">SUPERMERCADO</a>
+    <div class="input-group mb-3">
+      <input class="todo" type="search" [(ngModel)]="searchText" name="filtro" placeholder="buscar en supermercado" >
+      <div class="input-group-append">
+          <span class="input-group-text"><i class="fa fa-search"></i></span>
+      </div>
+    </div>
+  </nav>
 
 <div class="row">
     
-  <div class="col-sm-4">
-    <ul>
-      <li *ngFor="let producto of stock | filterPipe:searchText">
-      <!--<li *ngFor="let receta of stock | filter:searchText">-->
-          <span class="glyphicon glyphicon-ok-sign" aria-hidden="true" ></span>
-        
-      <a (click)="seleccionar($event, producto)">{{producto.marca}}<app-producto [productoParametro]="producto"></app-producto> </a>
-      </li>    
-    </ul>
-  </div>
+  <!--<div class="col-sm-4">    -->
+    <div class="productos" *ngFor="let producto of stock | filterPipe:searchText">     
+      <span class="glyphicon glyphicon-ok-sign" aria-hidden="true" ></span>        
+      <a (click)="seleccionar($event, producto)"><app-producto [productoParametro]="producto"></app-producto> </a>
+    </div>
+  <!--</div>-->
     
 </div>
 </div>

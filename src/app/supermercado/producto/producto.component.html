@@ -1,7 +1,5 @@
-<p>
-  producto works!
-</p>
-{{producto |json}}
+
+<!--{{producto |json}}-->
 <div class="thumbnail">
     <!-- directiva ngIf-->    
     <span class="badge descuento" *ngIf="producto.descuento>0" >{{producto.descuento}}%</span>
@@ -11,9 +9,10 @@
         <span [class]="(producto.descuento>0)?'strikethrough':'sinRebaja'">{{producto.precio}} €</span> 
         <span *ngIf="producto.descuento>0" class="rebajado">{{producto.rebajado}} €</span>
       </p>
-      <p>({{producto.precioUnidad}} €)</p>
-      <h3>{{producto.marca | uppercase}}</h3>
-      <p>{{ producto.descripcion }} </p>
-      
+      <p class="precioUnitario">({{producto.precioUnidad}})</p>
+      <p>{{producto.marca | uppercase}} {{producto.descripcion }} </p>
+      <!--<span class="label label-primary" (click)="sumar()"> {{producto.cantidad}}<i class="fa fa-heart-o" aria-hidden="true"></i></span>-->
   </div>
-  <input type="button">
+  
+</div>
+<button type="button" class="btn btn-primary btn-sm">AÑADIR AL CARRO</button>
