@@ -19,12 +19,19 @@ export class ServicioService {
       producto = new Producto();
       producto.id=element.id;
       producto.marca=element.marca;
+      producto.nombre=element.nombre;
       producto.descripcion=element.descripcion;
       producto.precio=element.precio;
       producto.descuento=element.descuento; //el descuento es sobre 1, un 20% corresponde a 0.2
       producto.foto=element.foto;
       producto.valor=element.valor;
-      producto.unidad=element.unidad;   
+      producto.unidad=element.unidad; 
+      producto.pecioUnidad =element.precioUnidad; 
+      if(element.descuento>0)
+      {
+        producto.rebajado =element.precio- (element.precio * (element.descuento/ 100)) ;
+      }
+
  
       this.productos.push(producto);
       });//fin foreach

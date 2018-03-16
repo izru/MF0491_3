@@ -19,6 +19,17 @@ export class SupermercadoComponent implements OnInit {
 
   ngOnInit() {
     console.log('SupermercadoComponent ngOnInit');
+    //coger datos de json
+    this.stock = this.servicioService.getAll();
+    this.producto = this.stock[0] || new Producto();
+  }
+
+   /** 
+   * funcion para emitir el eventos desde el hijo hacia el padre
+   **/
+  seleccionar( event, producto : Producto){
+    console.log('SupermercadoComponent Emitimos evento al ComponentePadre %o', producto );
+    this.producto =producto;
   }
 
 }

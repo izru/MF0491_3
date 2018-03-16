@@ -1,3 +1,19 @@
 <p>
   producto works!
 </p>
+{{producto |json}}
+<div class="thumbnail">
+    <!-- directiva ngIf-->    
+    <span class="badge descuento" *ngIf="producto.descuento>0" >{{producto.descuento}}%</span>
+    <img src="{{producto.foto}}" alt="{{producto.nombre}}">
+    <div class="caption">      
+      <p>        
+        <span [class]="(producto.descuento>0)?'strikethrough':'sinRebaja'">{{producto.precio}} €</span> 
+        <span *ngIf="producto.descuento>0" class="rebajado">{{producto.rebajado}} €</span>
+      </p>
+      <p>({{producto.precioUnidad}} €)</p>
+      <h3>{{producto.marca | uppercase}}</h3>
+      <p>{{ producto.descripcion }} </p>
+      
+  </div>
+  <input type="button">

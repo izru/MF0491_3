@@ -1,11 +1,21 @@
-<p>
-  supermercado works!
-</p>
-<ul>
-  <li *ngFor="let producto of stock">
+<div class="container">
+<input class="todo" type="search" [(ngModel)]="searchText" name="filtro" placeholder="nombre del producto" >
+
+
+<div class="row">
+    
+  <div class="col-sm-4">
+    <ul>
+      <li *ngFor="let producto of stock | filterPipe:searchText">
       <!--<li *ngFor="let receta of stock | filter:searchText">-->
           <span class="glyphicon glyphicon-ok-sign" aria-hidden="true" ></span>
         
-      <a >{{producto.marca}} </a>
-  </li>    
-</ul>
+      <a (click)="seleccionar($event, producto)">{{producto.marca}}<app-producto [productoParametro]="producto"></app-producto> </a>
+      </li>    
+    </ul>
+  </div>
+    
+</div>
+</div>
+
+

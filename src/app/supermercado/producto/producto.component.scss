@@ -1,0 +1,61 @@
+.thumbnail{
+    position: relative;
+    border:1px solid grey;
+    padding-left: 10px;
+    
+    img{
+        width: 100%;
+        border-radius: 10px;
+    
+    }
+    span.label{
+        float:right;
+    }
+    span.cocinero{
+        font-style: italic;
+    }
+    .badge{
+        background-color: #ED5A5A;
+        border-radius: 20px;
+        color:#FCFCFC;
+        font-size: 1.2em;
+        padding: 10px;
+        margin-top:10px;        
+    }
+    .rebajado{
+        color: #ED5A5A;
+        font-weight :bold;
+    
+    }
+    .sinRebaja{
+        font-size: 1.5em;
+        font-weight :bold;
+    }
+    
+    .strikethrough {
+        position: relative;
+        font-size: 0.8em;
+        color: #CDCDCD;
+    }
+     
+    .strikethrough:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 50%;
+        right: 0;
+        border-top: 1px solid;
+        border-color:#CDCDCD;
+         
+        -webkit-transform:rotate(-10deg);
+        -moz-transform:rotate(-10deg);
+        -ms-transform:rotate(-10deg);
+        -o-transform:rotate(-10deg);
+        transform:rotate(-10deg);
+    }
+}
+
+input{
+    width: 100%;
+    background-color: #88CC88;
+}
