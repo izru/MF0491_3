@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Producto } from '../../model/producto';
 
 @Component({
@@ -7,9 +7,11 @@ import { Producto } from '../../model/producto';
   styleUrls: ['./producto.component.scss']
 })
 export class ProductoComponent implements OnInit {
+  comprar: Producto[];
   //parametro del padre
-  @Input('producto') producto:Producto;
-  @Output('compras') comprar: Producto[];
+  @Input('producto') producto:Producto;  
+  //evento
+  @Output () carrito = new EventEmitter();
   constructor() { 
     console.log('ProductoComponent constructor');
     this.producto=new Producto() ;
@@ -38,5 +40,11 @@ export class ProductoComponent implements OnInit {
     console.log('cantidad comprada %o %n', this.producto, this.producto.cantidad);
 
   }
+
+  // Cuando se lance el evento click en la plantilla llamaremos a este método
+  lanzar(event){
+    // Usamos el método emit
+    this.carrito.emit({comprar: this.comprar});
+}
 
 }

@@ -32,6 +32,10 @@ export class SupermercadoComponent implements OnInit {
     this.producto =producto;
   }
 
+  showCarrito(event):void{
+    console.log('SupermercadoComponent recibimos del ComponenteHijo %o',event );
+       
+    }
   
 
 }
