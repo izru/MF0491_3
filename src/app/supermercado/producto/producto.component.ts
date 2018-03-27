@@ -46,5 +46,4 @@ export class ProductoComponent implements OnInit {
     // Usamos el método emit
     this.carrito.emit({comprar: this.comprar});
 }
-
 }

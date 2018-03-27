@@ -9,12 +9,22 @@ import { ServicioService } from '../providers/servicio.service';
 })
 export class SupermercadoComponent implements OnInit {
   stock:Producto[];
+  carrito:Producto[];
+  descuento: number;
+  total:number;
+  subtotal: number;
+  totalProductos:number;
+
   producto:Producto;
   constructor(public servicioService:ServicioService) { 
     console.log('SupermercadoComponent constructor');
     //inicializacion de variables
     this.stock=new Array<Producto>();
     this.producto=new Producto();
+    this.descuento=0;
+    this.total=0;
+    this.subtotal=0;
+    this.totalProductos=0;
   }
 
   ngOnInit() {
@@ -35,6 +45,14 @@ export class SupermercadoComponent implements OnInit {
   showCarrito(event):void{
     console.log('SupermercadoComponent recibimos del ComponenteHijo %o',event );
        
+    }
+
+    totalCarrito(){
+      this.total=0;
+      this.subtotal =0;
+      this.descuento =0;
+      this.totalProductos=0;
+      
     }
   
 

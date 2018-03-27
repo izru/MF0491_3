@@ -17,7 +17,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { AppComponent } from './app.component';
 import { SupermercadoComponent } from './supermercado/supermercado.component';
 import { ProductoComponent } from './supermercado/producto/producto.component';
-
+import { CarritoComponent } from './supermercado/carrito/carrito.component';
 
 
 
@@ -26,7 +26,8 @@ import { ProductoComponent } from './supermercado/producto/producto.component';
     AppComponent,
     SupermercadoComponent,
     ProductoComponent,
-    FilterPipe
+    FilterPipe,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
